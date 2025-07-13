@@ -1,0 +1,26 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+
+.container {
+  height: 735px;
+  width: 1226px;
+  background-color: #1e1e1e;
+  border: 1px solid;
+  border-color: #FFFBFB;
+  border-radius: 20px;
+  margin-top: 83px;
+  position: relative;
+}
+
+.formContainer {
+  height: 521px ;
+  width: 1108px ;
+  background-color: #0B0909;
+  border: 2px solid;
+  border-color: #4B884B;
+  border-radius: 15px;
+  margin-top: 92px;
+}
