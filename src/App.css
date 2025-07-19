@@ -5,8 +5,8 @@ html, body, #root {
 }
 
 .container {
-  height: 735px;
-  width: 1226px;
+  height: 850px;
+  width: 100%;
   background-color: #1e1e1e;
   border: 1px solid;
   border-color: #FFFBFB;
@@ -16,11 +16,28 @@ html, body, #root {
 }
 
 .formContainer {
-  height: 521px ;
+  height: 600px ;
   width: 1108px ;
   background-color: #0B0909;
   border: 2px solid;
   border-color: #4B884B;
   border-radius: 15px;
   margin-top: 92px;
+}
+
+input, select {
+  background-color: #1e1e1e;
+  border: 1px solid;
+  border-color: #4B884B;
+   
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4B884B;
+}
+
+input:hover, select:hover {
+  background-color: black;
+  transition: 1s;
 }
