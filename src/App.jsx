@@ -5,6 +5,7 @@ import Input from './components/Input'
 import Select from './components/Select'
 import { Calendar, Ruler, Venus, Weight } from 'lucide-react'
 import Button from './components/Button'
+import { motion } from 'framer-motion'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
   const [abdomen, setAbdomen] = useState('')
   const [cintura, setCintura] = useState('')
   const [quadril, setQuadril] = useState('')
+  const [resultado, setResultado] = useState('')
 
 function CleanValues() {
   setIdade('');
@@ -25,6 +27,30 @@ function CleanValues() {
   setAbdomen('');
   setCintura('');
   setQuadril('');
+}
+
+function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, quadril) {
+  if(
+      !sexo 
+    || !idade 
+    ||  !altura 
+    || !peso 
+    || !pescoco 
+    || (sexo == 'Masculino' && !abdomen) 
+    || (sexo == 'Feminino' && (!cintura || !quadril)))
+  {
+    return alert('Preencha todos os campos!')
+  }
+
+  let bf = 0;
+
+  if(sexo == 'Masculino') {
+    bf = 86.010 * Math.log10(abdomen - pescoco) - 70.041 * Math.log10(altura) + 36.76;
+  } else if (sexo == 'Feminino') {
+    bf = 163.205 * Math.log10(cintura + quadril - pescoco) - 97.684 * Math.log10(altura) - 78.387;
+  }
+
+  return setResultado(`${bf.toFixed(2)}%`);
 }
   return (
     <div className='w-screen min-h-screen flex justify-center ' style={{backgroundColor: "#111315"}}>
@@ -36,7 +62,12 @@ function CleanValues() {
             saudável! 
         </h2>
         <div className="formContainer flex flex-col items-center justify-center relative">
-      <h1 className='text-[#4B884B] font-bold absolute  top-12 text-[40px]'>BodyCalc</h1>
+      <motion.h1 className='text-[#4B884B] font-bold absolute  top-12 text-[40px]'
+       initial={{opacity: 0, y: 20}}
+      animate={{opacity: 1, y: 0}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      >BodyCalc
+      </motion.h1>
   <h1 className='text-[#f1f1f1] text-center text-[16px] font-bold  mb-8'>
     Preencha abaixo algumas <br />
     informações a respeito de você 
@@ -117,13 +148,23 @@ function CleanValues() {
   )}      
     </div>
     <div className='flex items-center gap-[85px] top-16 relative'>
-    <Button>
+    <Button onClick={() => BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, quadril)}>
       Calcular
     </Button>
     <Button onClick={CleanValues}>
       Limpar valores
     </Button>
     </div>
+    {resultado && (
+      <motion.div className=' items-center text-center top-25 relative'
+      initial={{opacity: 0, y: 20}}
+      animate={{opacity: 1, y: 0}}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
+        <p className=' text-white font-bold'>O seu percentual de gordura atual é de:</p>
+        <h1 className='text-white font-bold top-3 relative text-3xl'>{resultado}</h1>
+      </motion.div>
+
+    )}
     </div>
   </div>
 </div>

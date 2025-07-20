@@ -13,7 +13,7 @@ function Button(props) {
          border-2 border-white bg-[#2E502E]
           rounded-[12px] text-white font-medium
           cursor-pointer
-          hover:bg-green-900 ">
+          hover:bg-green-900">
             {props.children}
         </motion.button>
     )
