@@ -5,7 +5,7 @@ html, body, #root {
 }
 
 .container {
-  height: 850px;
+  height: 900px;
   width: 100%;
   background-color: #1e1e1e;
   border: 1px solid;
@@ -16,7 +16,7 @@ html, body, #root {
 }
 
 .formContainer {
-  height: 600px ;
+  height: 650px ;
   width: 1108px ;
   background-color: #0B0909;
   border: 2px solid;
@@ -40,4 +40,14 @@ input:focus, select:focus {
 input:hover, select:hover {
   background-color: black;
   transition: 1s;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

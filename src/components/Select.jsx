@@ -10,9 +10,9 @@ function Select(props) {
             className={`${props.className ? props.className : ""}
              h-[30px] w-[200px] rounded-md text-[#ADAAAA] text-center
              font-medium 
-              focus:bg-[#222]`}
-              value={props.sexo}
-              onChange={(e) => props.setSexo(e.target.value)}>
+              focus:bg-[#222] custom-select`}
+              value={props.value}
+              onChange={(e) => props.setValue(e.target.value)}>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
         </motion.select>
