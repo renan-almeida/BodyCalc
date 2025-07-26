@@ -6,6 +6,7 @@ import Select from './Select'
 import { Calendar, Ruler, Venus, Weight, Info, Asterisk, Github } from 'lucide-react'
 import Button from './Button'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 
 function Form() {
@@ -61,6 +62,10 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
 
   return setResultado(`${bf.toFixed(2)}%`);
 }
+
+ const navigate = useNavigate();
+
+
     return (
         <div className="formContainer flex flex-col items-center justify-center relative">
       <motion.h1 className='text-[#4B884B] font-bold absolute  top-12 text-[40px]'
