@@ -69,7 +69,7 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
     return (
         <div className="formContainer flex flex-col items-center justify-center relative">
       <motion.h1 className='text-[#4B884B] font-bold absolute  top-12 text-[40px]'
-       initial={{opacity: 0, y: 20}}
+       initial={{opacity: 0, y: -20}}
       animate={{opacity: 1, y: 0}}
       transition={{ duration: 0.6, ease: "easeOut" }}
       >BodyCalc

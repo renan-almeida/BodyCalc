@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-function Menu({onClick}) {
+function Menu() {
     const navigate = useNavigate();
 
+    const onClickInitial = () => {
+        navigate('/');
+    }
+    const onClick = () => {
+        alert('Em breve!');
+    }
     function onSeeBfTableClick() {
     navigate('/TabelasBf');
   }
@@ -13,7 +19,7 @@ function Menu({onClick}) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}>
             <ul className="flex gap-[208px] text-white font-semibold mt-8">
-                <li onClick={onClick}>Inicio</li>
+                <li onClick={onClickInitial}>Inicio</li>
                 <li onClick={onSeeBfTableClick}>Tabela de BF</li>
                 <li onClick={onClick}>Como medir?</li>
                 <li onClick={onClick}>Sobre</li>

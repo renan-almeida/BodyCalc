@@ -15,8 +15,29 @@ html, body, #root {
   position: relative;
 }
 
+.containerTableBf {
+  height: 1500px;
+  width: 100%;
+  background-color: #1e1e1e;
+  border: 1px solid;
+  border-color: #FFFBFB;
+  border-radius: 20px;
+  margin-top: 83px;
+  position: relative;
+}
+
 .formContainer {
   height: 650px;
+  width: 1108px;
+  background-color: #0B0909;
+  border: 2px solid;
+  border-color: #4B884B;
+  border-radius: 15px;
+  margin-top: 92px;
+}
+
+.formContainerTable {
+  height: 1050px;
   width: 1108px;
   background-color: #0B0909;
   border: 2px solid;
