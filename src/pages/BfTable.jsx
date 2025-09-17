@@ -49,7 +49,7 @@ function BfTable() {
                     </div>
                     <div
                      className="mt-12 gap-5 flex items-center justify-center">
-                    {sexo === 'masculino' ? (
+                    {sexo === 'masculino' && (
                         <motion.table
                         initial={{ opacity: 0,  x: -1000 }}
                         animate={{opacity: 1,  x: 0 }}
@@ -57,56 +57,56 @@ function BfTable() {
                         className="border-collapse border border-white text-white w-[800px] text-center ">
   <thead>
     <tr>
-      <th Rowspan="2" className="border-2 border-white px-4 py-2 bg-[#4B884B]">Classificação</th>
-      <th Colspan="4" className="border-2 border-white px-4 py-2 bg-[#4B884B]">Percentual de Gordura nos Homens</th>
+      <th rowSpan="2" className="border-2 border-white px-4 py-2 bg-[#4B884B] hover:bg-green-900 transition-all duration-200">Classificação</th>
+      <th colSpan="4" className="border-2 border-white px-4 py-2 bg-[#4B884B] hover:bg-green-900 transition-all duration-200">Percentual de Gordura nos Homens</th>
     </tr>
     <tr>
-      <th className="border border-white bg-[#747474] px-4 py-2">20 a 29 anos</th>
-      <th className="border border-white bg-[#747474] px-4 py-2">30 a 39 anos</th>
-      <th className="border border-white bg-[#747474] px-4 py-2">40 a 49 anos</th>
-      <th class="border border-white bg-[#747474] px-4 py-2">50 a 59 anos</th>
+      <th className="border border-white bg-[#747474] px-4 py-2 hover:bg-gray-600 transition-all duration-500">20 a 29 anos</th>
+      <th className="border border-white bg-[#747474] px-4 py-2 hover:bg-gray-600 transition-all duration-500">30 a 39 anos</th>
+      <th className="border border-white bg-[#747474] px-4 py-2 hover:bg-gray-600 transition-all duration-500">40 a 49 anos</th>
+      <th className="border border-white bg-[#747474] px-4 py-2 hover:bg-gray-600 transition-all duration-500">50 a 59 anos</th>
     </tr>
   </thead>
   <tbody className="text-[#F1F1F1] text-[18px] font-medium bg-emerald-900">
     <tr className="border border-white px-4 py-2">
-      <td className="bg-[#b9b911]">Atleta</td>
-      <td className="border">Menos de 11%</td>
-      <td className="border">Menos de 12%</td>
-      <td className="border">Menos de 14%</td>
-      <td className="border  px-4 py-2">Menos de 15%</td>
+      <td className="bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Atleta</td>
+      <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Menos de 11%</td>
+      <td className="border hover:bg-emerald-950 transition-all duration-500">Menos de 12%</td>
+      <td className="border hover:bg-emerald-950 transition-all duration-500">Menos de 14%</td>
+      <td className="border hover:bg-emerald-950 transition-all duration-500">Menos de 15%</td>
     </tr>
     <tr className="border border-white  px-4 py-2">
-      <td className="border  bg-[#b9b911] px-4 py-2">Bom</td>
-      <td className="border  px-4 py-2">11% a 13%</td>
-      <td className="border  px-4 py-2">12% a 14%</td>
-      <td className="border  px-4 py-2">14% a 16%</td>
-      <td className="border  px-4 py-2">15% a 17%</td>
+      <td className="border  bg-[#b9b911] px-4 py-2 hover:bg-[#92920e] transition-all duration-500">Bom</td>
+      <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">11% a 13%</td>
+      <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">12% a 14%</td>
+      <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">14% a 16%</td>
+      <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">15% a 17%</td>
     </tr>
     <tr>
-      <td class="border  bg-[#b9b911]">Normal</td>
-      <td class="border ">14% a 20%</td>
-      <td class="border ">15% a 21%</td>
-      <td class="border ">17% a 23%</td>
-      <td class="border  px-4 py-2">18% a 24%</td>
+      <td className="border  bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Normal</td>
+      <td className="border px-4 py-2  hover:bg-emerald-950 transition-all duration-500">14% a 20%</td>
+      <td className="border  hover:bg-emerald-950 transition-all duration-500">15% a 21%</td>
+      <td className="border  hover:bg-emerald-950 transition-all duration-500">17% a 23%</td>
+      <td className="border  hover:bg-emerald-950 transition-all duration-500">18% a 24%</td>
     </tr>
     <tr>
-      <td class="border  px-4 py-2 bg-[#b9b911]">Elevado</td>
-      <td class="border  px-4 py-2">21% a 23%</td>
-      <td class="border  px-4 py-2">22% a 24%</td>
-      <td class="border  px-4 py-2">24% a 26%</td>
-      <td class="border  px-4 py-2">25% a 27%</td>
+      <td class="border  px-4 py-2 bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Elevado</td>
+      <td class="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">21% a 23%</td>
+      <td className="border  hover:bg-emerald-950 transition-all duration-500">22% a 24%</td>
+      <td className="border  hover:bg-emerald-950 transition-all duration-500">24% a 26%</td>
+      <td className="border hover:bg-emerald-950 transition-all duration-500">25% a 27%</td>
     </tr>
     <tr>
-      <td className="border  px-4 py-2 bg-[#b9b911]">Muito Elevado</td>
-      <td className="border  px-4 py-2">Mais de 23%</td>
-      <td className="border  px-4 py-2">Mais de 24%</td>
-      <td className="border  px-4 py-2">Mais de 26%</td>
-      <td className="border  px-4 py-2">Mais de 27%</td>
+      <td className="border  px-4 py-2 bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Muito Elevado</td>
+      <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Mais de 23%</td>
+      <td className="border   hover:bg-emerald-950 transition-all duration-500">Mais de 24%</td>
+      <td className="border   hover:bg-emerald-950 transition-all duration-500">Mais de 26%</td>
+      <td className="border   hover:bg-emerald-950 transition-all duration-500">Mais de 27%</td>
     </tr>
   </tbody>
 </motion.table>
 
-                    ) : (
+                    )} {sexo === 'feminino' && (
                         <motion.table
                         initial={{ opacity: 0,  x: -1000 }}
                         animate={{opacity: 1,  x: 0 }}
@@ -114,8 +114,8 @@ function BfTable() {
                         className="border-collapse border border-white text-white w-[800px] text-center">
                             <thead className="text-white ">
                                 <tr className="bg-[#4B884B] font-semibold ">
-                                <th className="px-4 py-2 border-2 hover:bg-green-900 transition-all duration-200" RowSpan={2}>Classificação</th>
-                                <th className="px-4 py-2 border-2 hover:bg-green-900 transition-all duration-200" ColSpan={4}>Percentual de gordura das mulheres</th>
+                                <th className="px-4 py-2 border-2 hover:bg-green-900 transition-all duration-200" rowSpan={2}>Classificação</th>
+                                <th className="px-4 py-2 border-2 hover:bg-green-900 transition-all duration-200" colSpan={4}>Percentual de gordura das mulheres</th>
                             </tr>
                             <tr className=" font-medium bg-[#747474]">
                                 <th className="border px-4 py-2 hover:bg-gray-600 transition-all duration-500">20 a 29 anos</th>
@@ -124,41 +124,41 @@ function BfTable() {
                                 <th className="border px-4 py-2 hover:bg-gray-600 transition-all duration-500">50 a 59 anos</th>
                             </tr>
                             </thead>
-                            <tbody className="bg-emerald-900 text-[#F1F1F1] text-[18px] font-medium text-center">
+                            <tbody className="bg-emerald-900  text-[#F1F1F1] text-[18px] font-medium text-center">
                                 <tr className="border border-white px-4 py-2">
-                                    <td className="bg-[#b9b911] px-4 py-2">Atleta</td>
-                                    <td className="border px-4 py-2">Menos de 11%</td>
-                                    <td className="border px-4 py-2">Menos de 12%</td>
-                                    <td className="border px-4 py-2">Menos de 14%</td>
-                                    <td className="border  px-4 py-2">Menos de 15%</td>
+                                    <td className="bg-[#b9b911] px-4 py-2 hover:bg-[#92920e] transition-all duration-500">Atleta</td>
+                                    <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Menos de 11%</td>
+                                    <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Menos de 12%</td>
+                                    <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Menos de 14%</td>
+                                    <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Menos de 15%</td>
                                 </tr>
                                 <tr className="border border-white  px-4 py-2">
-                                    <td className="border  bg-[#b9b911] px-4 py-2">Bom</td>
-                                    <td className="border  px-4 py-2">11% a 13%</td>
-                                    <td className="border  px-4 py-2">12% a 14%</td>
-                                    <td className="border  px-4 py-2">14% a 16%</td>
-                                    <td className="border  px-4 py-2">15% a 17%</td>
+                                    <td className="border  bg-[#b9b911] px-4 py-2 hover:bg-[#92920e] transition-all duration-500">Bom</td>
+                                    <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">11% a 13%</td>
+                                    <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">12% a 14%</td>
+                                    <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">14% a 16%</td>
+                                    <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">15% a 17%</td>
                                 </tr>
                                         <tr>
-                                        <td className="border  bg-[#b9b911] px-4 py-2">Normal</td>
-                                        <td className="border px-4 py-2">14% a 20%</td>
-                                        <td className="border px-4 py-2">15% a 21%</td>
-                                        <td className="border px-4 py-2">17% a 23%</td>
-                                        <td className="border  px-4 py-2">18% a 24%</td>
+                                        <td className="border  bg-[#b9b911] px-4 py-2 hover:bg-[#92920e] transition-all duration-500">Normal</td>
+                                        <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">14% a 20%</td>
+                                        <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">15% a 21%</td>
+                                        <td className="border px-4 py-2 hover:bg-emerald-950 transition-all duration-500">17% a 23%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">18% a 24%</td>
                                         </tr>
                                         <tr>
-                                        <td class="border  px-4 py-2 bg-[#b9b911]">Elevado</td>
-                                        <td class="border  px-4 py-2">21% a 23%</td>
-                                        <td class="border  px-4 py-2">22% a 24%</td>
-                                        <td class="border  px-4 py-2">24% a 26%</td>
-                                        <td class="border  px-4 py-2">25% a 27%</td>
+                                        <td className="border  px-4 py-2 bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Elevado</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">21% a 23%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">22% a 24%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">24% a 26%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">25% a 27%</td>
                                         </tr>
                                         <tr>
-                                        <td className="border  px-4 py-2 bg-[#b9b911]">Muito Elevado</td>
-                                        <td className="border  px-4 py-2">Mais de 23%</td>
-                                        <td className="border  px-4 py-2">Mais de 24%</td>
-                                        <td className="border  px-4 py-2">Mais de 26%</td>
-                                        <td className="border  px-4 py-2">Mais de 27%</td>
+                                        <td className="border  px-4 py-2 bg-[#b9b911] hover:bg-[#92920e] transition-all duration-500">Muito Elevado</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Mais de 23%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Mais de 24%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Mais de 26%</td>
+                                        <td className="border  px-4 py-2 hover:bg-emerald-950 transition-all duration-500">Mais de 27%</td>
                                         </tr>
                                 </tbody>
                             </motion.table>
