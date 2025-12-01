@@ -216,9 +216,9 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
       transition={{ duration: 0.6, ease: "easeOut" }}>
         <p className=' text-white font-bold'>O seu percentual de gordura atual é de:</p>
         <h1 className='text-white font-bold top-3 relative text-3xl '>{resultado}</h1>
-        <p className='text-center text-[#4B884B] text-[13px] font-semibold
+        <p className='text-center text-[#4B884B] text-[12px] font-semibold
         top-4 relative cursor-pointer hover:font-bold hover:text-green-600 transition duration-300'
-            >Clique aqui para ver o relatório completo</p>
+            >Relatório sobre</p>
       </motion.div>
     )}
     <div className='absolute bottom-0 left-0 m-4 flex flex-col text-white font-semibold text-[12px] '>

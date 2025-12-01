@@ -1,6 +1,6 @@
 import Menu from "../components/Menu";
 import { motion } from "framer-motion";
-import homematleta from "../assets/homematleta.png";
+import homematletabodycalc from "../assets/homematletabodycalc.png";
 import mulheratleta from "../assets/mulheratleta.png";
 import Img from "../components/Img";
 import Button from "../components/Button";
@@ -33,7 +33,7 @@ function BfTable() {
                     </motion.h1>
                     <div className="flex ml-8 gap-[250px] mt-5">
                         <div className="flex flex-col items-center gap-10">
-                            <Img src={homematleta} alt="Homem Atleta" className="h-[450px] top-10 relative" />
+                            <Img src={homematletabodycalc} alt="Homem Atleta" className="h-[450px] top-10 relative" />
                             <Button className="mt-5 relative"
                             variant="outline"
                             onClick={() => setSexo('masculino')}>

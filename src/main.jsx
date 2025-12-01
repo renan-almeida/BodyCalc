@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import BfTable from './pages/BfTable.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Measures from './pages/Measures.jsx'
 
 
   const router = createBrowserRouter([
@@ -14,6 +15,10 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
     {
       path: '/TabelasBf',
       element: <BfTable />,
+    },
+    {
+      path: '/Medidas',
+      element: <Measures />,
     }
   ]);
 

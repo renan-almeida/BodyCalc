@@ -4,8 +4,8 @@ import { transform } from "zod";
 function Button(props) {
     return (
         <motion.button
-        initial={{opacity : 0}}
-        animate={{opacity : 1}}
+        initial={{opacity : 0, y : -20}}
+        animate={{opacity : 1, y : 0}}
         transition={{duration : 1}}
         whileTap={{scale : 0.95}}
         onClick={props.onClick}

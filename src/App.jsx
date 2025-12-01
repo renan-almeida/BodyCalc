@@ -1,13 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+
 import Form from './components/Form'
 import Menu from './components/Menu'
 
 function App() {
-
-  const navigate = useNavigate();
-
-
-
   return (
     <div className='w-screen min-h-screen flex justify-center ' style={{backgroundColor: "#111315"}}>
       <div className='container flex flex-col items-center relative'>
