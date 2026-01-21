@@ -23,7 +23,7 @@ function Menu() {
             transition={{ duration: 1 }}>
             <ul className="flex gap-[208px] text-white font-semibold mt-8">
                 <li onClick={onClickInitial}>Inicio</li>
-                <li onClick={onSeeBfTableClick}>Tabela de BF</li>
+                <li onClick={onSeeBfTableClick}>Tabelas de BF</li>
                 <li onClick={onSeeMeasuresClick}>Como medir?</li>
                 <li onClick={onClick}>Sobre</li>
             </ul>

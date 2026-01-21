@@ -5,6 +5,8 @@ import peso from "../assets/peso.png";
 import altura from "../assets/altura.png";
 import abdomen from "../assets/abdomen.png"
 import pescoco from "../assets/pescoco.png";
+import cintura from "../assets/cintura.png";
+import quadril from "../assets/quadril.png";
 import Img from "../components/Img";
 import Button from "../components/Button";
 
@@ -29,35 +31,43 @@ function Measures() {
                     <motion.p className="text-[#4B884B] text-[20px] font-bold mt-4 text-center"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeOut" }}>
+                        transition={{ duration: 0.5, ease: "easeOut" }}>
                         BodyCalc
                     </motion.p>
                     <motion.h1 className="text-white text-[32px] font-bold mt-4 text-center"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeOut" }}>
+                        transition={{ duration: 0.5, ease: "easeOut" }}>
                             Guia de Medidas
                     </motion.h1>
                     <div className='flex justify-center gap-21'>
-                        <div className="flex flex-col">
-                            <Img src={peso} alt="Como medir o peso" className="h-[300px] top-10 relative" />
+                        <div className='mt-9 flex flex-col items-center gap-10 '>
+                            <Img src={peso} alt="Como medir o peso" className="h-[225px] top-10  relative " />
                             <Button>Peso</Button>
                         </div>
                         <div className='mt-9 flex flex-col items-center gap-10 '>
                             <Img src={altura} alt="Como medir a altura" className="h-[225px] top-10 relative" />
                             <Button>Altura</Button>
                         </div>
-                        <div className="flex flex-col">
-                            <Img src={abdomen} alt="Como medir o abdomen" className="h-[300px] top-10 relative" />
+                        <div className="flex flex-col gap-10 mt-9 items-center">
+                            <Img src={abdomen} alt="Como medir o abdomen" className="h-[225px] top-10 relative " />
                             <Button>Abdômen</Button>
                         </div> 
                     </div>
-                     <div className=" flex items-center justify-center mt-10">
-                            <div className="gap-10 flex flex-col">
-                                <Img src={pescoco} alt="Como medir o pescoço" className="h-[200px] top-10 relative" />
+                    <div className=" flex items-center justify-center mt-10 gap-21">
+                            <div className="gap-22 flex flex-col items-center">
+                                <Img src={pescoco} alt="Como medir o pescoço" className="h-[225px] top-15 relative" />
                                 <Button>Pescoço</Button>
                             </div>
-                        </div>
+                            <div className="gap-13 flex flex-col items-center">
+                                <Img src={cintura} alt="Como medir a cintura" className="h-[265px] top-10 relative" />
+                                <Button>Cintura</Button>
+                            </div>
+                            <div className="flex flex-col items-center gap-20">
+                                <Img src={quadril} alt="Como medir o quadril" className="h-[200px] top-10 relative mt-9"/>
+                                <Button>Quadril</Button>
+                            </div>
+                    </div>
                 </div>
                 </div>
             </div>
