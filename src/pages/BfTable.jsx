@@ -1,10 +1,12 @@
 import Menu from "../components/Menu";
 import { motion } from "framer-motion";
+import Title from "../components/Title"
 import homematletabodycalc from "../assets/homematletabodycalc.png";
 import mulheratleta from "../assets/mulheratleta.png";
 import Img from "../components/Img";
 import Button from "../components/Button";
 import {  useState } from "react";
+import bodycalclogotipo from "../assets/bodycalclogotipo.png"
 
 
 
@@ -15,14 +17,14 @@ function BfTable() {
          <div className='w-screen min-h-screen flex justify-center ' style={{backgroundColor: "#111315"}}>
             <div className='containerTableBf flex flex-col items-center relative'>
                 <Menu />
-                 <h1 className='text-white text-2xl font-bold top-16 relative mb-4'>
+                 <Title className='text-white text-2xl font-bold top-16 relative mb-4'>
                     Tabela de Percentual de Gordura
-                </h1>
-                <p className="text-[#4B884B] text-[15px] top-14 relative font-medium">
+                </Title>
+                <Title className="text-[#4B884B] text-[15px] top-14 relative font-medium">
                     A tabela abaixo apresenta os valores de percentual de gordura corporal  para homens e mulheres, <br />
                      de acordo com a classificação da Organização Mundial da Saúde (OMS).
                      <br /> Esses valores são utilizados como referência para avaliar a saúde e o estado físico de um indivíduo.
-                </p>
+                </Title>
                 <div className="formContainerTable">
                     <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -31,7 +33,7 @@ function BfTable() {
                     className="text-white font-semibold text-2xl mt-10 text-center">
                         informe o seu sexo abaixo
                     </motion.h1>
-                    <div className="flex ml-8 gap-[250px] mt-5">
+                    <div className="flex ml-8 gap-20 mt-5 relative">
                         <div className="flex flex-col items-center gap-10">
                             <Img src={homematletabodycalc} alt="Homem Atleta" className="h-[450px] top-10 relative" />
                             <Button className="mt-5 relative"
@@ -39,6 +41,9 @@ function BfTable() {
                             onClick={() => setSexo('masculino')}>
                                 Masculino
                             </Button>
+                        </div>
+                        <div className="flex justify-center items-center relative bottom-10 right-10 ">
+                            <Img src={bodycalclogotipo} className="h-[100px] w-[100px]" />
                         </div>
                         <div className="flex flex-col items-center gap-10">
                             <Img src={mulheratleta} alt="Mulher Atleta" className="h-[450px] top-10 relative" />

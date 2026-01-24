@@ -7,6 +7,8 @@ import { Calendar, Ruler, Venus, Weight, Info, Asterisk, Github } from 'lucide-r
 import Button from './Button'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import Img from './Img'
+import bodycalclogotipo from '../assets/bodycalclogotipo.png'
 
 
 function Form() {
@@ -68,12 +70,7 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
 
     return (
         <div className="formContainer flex flex-col items-center justify-center relative">
-      <motion.h1 className='text-[#4B884B] font-bold absolute  top-12 text-[40px]'
-       initial={{opacity: 0, y: -20}}
-      animate={{opacity: 1, y: 0}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      >BodyCalc
-      </motion.h1>
+      <Img src={bodycalclogotipo} className="h-[100px] w-[100px] absolute top-10" />
   <h1 className='text-[#f1f1f1] text-center text-[16px] font-bold  mb-8'>
     Preencha abaixo algumas <br />
     informações a respeito de você 
