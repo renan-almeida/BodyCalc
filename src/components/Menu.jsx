@@ -7,7 +7,7 @@ function Menu() {
         navigate('/');
     }
     const onClick = () => {
-        alert('Em breve!');
+        navigate('/Sobre');
     }
     function onSeeBfTableClick() {
     navigate('/TabelasBf');
