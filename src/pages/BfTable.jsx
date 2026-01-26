@@ -7,6 +7,7 @@ import Img from "../components/Img";
 import Button from "../components/Button";
 import {  useState } from "react";
 import bodycalclogotipo from "../assets/bodycalclogotipo.png"
+import Portfolio from "../components/Portfolio";
 
 
 
@@ -168,6 +169,9 @@ function BfTable() {
                                 </tbody>
                             </motion.table>
                         )}
+                    </div>
+                    <div className="justify-center flex">
+                        <Portfolio />
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import Img from './Img'
 import bodycalclogotipo from '../assets/bodycalclogotipo.png'
+import Portfolio from './Portfolio'
 
 
 function Form() {
@@ -218,19 +219,8 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
             >Relatório sobre</p>
       </motion.div>
     )}
-    <div className='absolute bottom-0 left-0 m-4 flex flex-col text-white font-semibold text-[12px] '>
-      <p>Desenvolvido por:  
-        <span className='text-[#4B884B] font-bold ml-1'>
-        Renan Almeida
-      </span>
-      </p>
-      <div className='flex '>
-        <Github size={24} color="#4B884B" />
-        <a href="https://github.com/renan-almeida" target="_blank" 
-          className='ml-2 top-0.5 relative text-[12px]'>
-          renan-almeida
-        </a>
-      </div>
+    <div className='flex relative top-45 right-110'>
+      <Portfolio />
     </div>
     </div>
     )

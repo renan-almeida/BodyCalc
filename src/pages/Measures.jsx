@@ -10,7 +10,8 @@ import cintura from "../assets/cintura.png";
 import quadril from "../assets/quadril.png";
 import Img from "../components/Img";
 import Button from "../components/Button";
-import bodycalclogotipo from "../assets/bodycalclogotipo.png"
+import bodycalclogotipo from "../assets/bodycalclogotipo.png";
+import Portfolio from "../components/Portfolio";
 function Measures() {
 
     const [medidaEscolhida, SetMedidaEscolhida] = useState('')
@@ -69,6 +70,7 @@ function Measures() {
                                 <Button onClick={() => SetMedidaEscolhida('Quadril')}>Quadril</Button>
                             </div>
                     </div>
+             
                     <div>
                         {medidaEscolhida === 'Peso' && (
                             alert("Ola mundo!")
@@ -77,6 +79,9 @@ function Measures() {
                             alert("Ola mundo!")
                         )} 
                     </div>
+                       <div className="flex justify-center top-17 relative">
+                    <Portfolio />
+                </div>
                 </div>
                 </div>
             </div>
