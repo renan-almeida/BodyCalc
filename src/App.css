@@ -5,7 +5,7 @@ html, body, #root {
 }
 
 .container {
-  height: 1000px;
+  height: 100%;
   width: 100%;
   background-color: #1e1e1e;
   border: 1px solid;
@@ -84,5 +84,17 @@ li {
 li:hover {
   background-color: #4b884b67;
   color: white;
+  cursor: pointer;
+}
+
+.strokeWhoCreated {
+  -webkit-text-stroke: 1px white;
+}
+
+.strokeNameCreator {
+  -webkit-text-stroke: 3px #4B884B;
+}
+
+.strokeNameCreator:hover {
   cursor: pointer;
 }

@@ -2,6 +2,7 @@ import Menu from "../components/Menu"
 import Title from "../components/Title"
 import Img from "../components/Img"
 import bodycalclogotipo from "../assets/bodycalclogotipo.png"
+import criadorbodycalc from "../assets/criadorbodycalc.jpeg"
 import { motion } from "framer-motion"
 
 function AboutUs() {
@@ -10,7 +11,7 @@ function AboutUs() {
         <div className="container">
             <Menu />
             <div className="flex flex-col">
-                <div>
+                <div >
                     <Img src={bodycalclogotipo} className="h-[300px] relative left-22 top-17"/>
                <Title className="text-white font-semibold text-[20px] top-35
                                  relative justify-center left-[100px]">
@@ -40,8 +41,32 @@ function AboutUs() {
                           corporal e cuidar melhor da própria saúde. 
                    </h3>
                     </div>
-                  
                 </motion.div>
+            </div>
+            <div className="flex">
+                <Title className="font-bold text-[80px] text-[#4B884B]
+                  relative left-[95px] strokeWhoCreated">
+                    Quem criou <br/>a BodyCalc?
+                </Title>
+                <div className="flex flex-col items-center ">
+                     <motion.div whileHover={{ y: -5}} className="border-[#4b884b] border-4 rounded-full w-[200px] h-[200px] 
+                relative left-100 overflow-hidden flex flex-col justify-center">
+                            <Img src={criadorbodycalc} className="w-full h-full object-cover object-top rounded-full" />
+                    </motion.div>
+                    <motion.div whileHover={{ y: -10}}>
+                        <Title className="strokeNameCreator text-[#FFFFFF] font-bold left-103 relative text-6xl ">
+                            Renan 
+                        </Title>
+                    </motion.div>
+                    <motion.div whileHover={{ y: -10,  }}
+                    className="strokeNameCreator text-white font-bold text-[50px] relative left-103">
+                        <Title>
+                            Almeida Dantas
+                        </Title>
+                    </motion.div>
+
+                </div>
+               
             </div>
             
         </div>
