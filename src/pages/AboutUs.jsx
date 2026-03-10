@@ -21,13 +21,13 @@ function AboutUs() {
                 </span>
                </Title>
                 </div>          
-                <motion.div className="border-white border-2 border-solid rounded-2xl w-[594px] h-[410px] flex-col
+                <motion.div className="border-[#4B884B] border-3 border-solid rounded-2xl w-[594px] h-[410px] flex-col
                                 flex bottom-[180px] left-[620px] justify-start relative  bg-[#ffffff10] p-8"
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0}}
                                 transition={{duration: 0.5, ease: "easeOut"}}>
                     <div>
-                         <h3 className="text-[#ADAAAA] font-semibold text-[20px] whitespace-pre">
+                         <h3 className="text-[#ADAAAA] hover:text-white transition duration-1000 font-semibold text-[20px] whitespace-pre">
                     Você já teve dúvidas sobre como está o seu corpo? <br />
                     Aquela “pochetezinha” pode realmente <br /> fazer algum mal à sua saúde? <br />
                     Pensando nisso, o Dev Renan Almeida Dantas <br />
@@ -43,30 +43,48 @@ function AboutUs() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex">
+            <div className="flex flex-col ">
                 <Title className="font-bold text-[80px] text-[#4B884B]
                   relative left-[95px] strokeWhoCreated">
                     Quem criou <br/>a BodyCalc?
                 </Title>
                 <div className="flex flex-col items-center ">
                      <motion.div whileHover={{ y: -5}} className="border-[#4b884b] border-4 rounded-full w-[200px] h-[200px] 
-                relative left-100 overflow-hidden flex flex-col justify-center">
+                relative left-80  overflow-hidden justify-start bottom-50 ">
                             <Img src={criadorbodycalc} className="w-full h-full object-cover object-top rounded-full" />
                     </motion.div>
                     <motion.div whileHover={{ y: -10}}>
-                        <Title className="strokeNameCreator text-[#FFFFFF] font-bold left-103 relative text-6xl ">
+                        <Title className="strokeNameCreator text-[#FFFFFF] font-bold left-80  relative text-6xl bottom-50  ">
                             Renan 
                         </Title>
                     </motion.div>
                     <motion.div whileHover={{ y: -10,  }}
-                    className="strokeNameCreator text-white font-bold text-[50px] relative left-103">
+                    className="strokeNameCreator text-white font-bold text-[50px] relative left-80 bottom-48">
                         <Title>
                             Almeida Dantas
                         </Title>
                     </motion.div>
-
                 </div>
-               
+                <motion.div className="border-3 border-[#4B884B] rounded-2xl w-[594px] h-[423px] 
+                                        relative justify-start left-[47px] bottom-80">
+                        <Title className="text-[#ADAAAA] hover:text-white  transition duration-1000 
+                                        font-semibold text-[20px] justify-center relative m-3 left-12 whitespace-pre">
+                            Como praticante de musculação, Renan sempre <br/>
+                             buscou bons sites para acompanhar, de forma <br/>
+                              frequente, a atualização do seu percentual de <br/>
+                               gordura corporal. No entanto, ele encontrava <br/>
+                                dificuldades em achar plataformas que fossem <br/>
+                                 realmente completas, confiáveis e que oferecessem <br/>
+                                  uma boa acessibilidade ao usuário. <br/>
+                                Diante disso, surgiu a BodyCalc: uma solução <br/>
+                                 simples, rápida e direta, desenvolvida para ajudar <br/>
+                                  você a se manter rotineiramente atualizado sobre o <br/>
+                                   seu BF corporal, além de proporcionar uma <br/>
+                                    experiência muito mais intuitiva e fácil de usar <br/>
+                                     quando comparada a outros sites disponíveis.
+                        </Title>
+
+                </motion.div>
             </div>
             
         </div>
