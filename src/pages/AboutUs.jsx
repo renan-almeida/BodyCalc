@@ -3,6 +3,9 @@ import Title from "../components/Title"
 import Img from "../components/Img"
 import bodycalclogotipo from "../assets/bodycalclogotipo.png"
 import criadorbodycalc from "../assets/criadorbodycalc.jpeg"
+import github from "../assets/github.png"
+import linkedin from "../assets/linkedin.png"
+import instagram from "../assets/instagram.png"
 import { motion } from "framer-motion"
 
 function AboutUs() {
@@ -14,7 +17,7 @@ function AboutUs() {
                 <div >
                     <Img src={bodycalclogotipo} className="h-[300px] relative left-22 top-17"/>
                <Title className="text-white font-semibold text-[20px] top-35
-                                 relative justify-center left-[100px]">
+                                 relative justify-center left-[100px] hover:text-[#4B884B] transition duration-500">
                 Descubra o seu percentual de <br/> 
                 <span className="relative left-[70px]">
                     gordura aqui! 
@@ -83,8 +86,22 @@ function AboutUs() {
                                     experiência muito mais intuitiva e fácil de usar <br/>
                                      quando comparada a outros sites disponíveis.
                         </Title>
-
                 </motion.div>
+                <div className=" flex justify-center items-center gap-14 relative left-84 bottom-124">
+                   <motion.a whileHover={{ y: -10 }} href="https://www.instagram.com/renixpp/" target="_blank" rel="noopener noreferrer">
+                        <Img src={instagram} className="w-[50px] h-[50px] cursor-pointer"/>
+                   </motion.a>
+                    <motion.a whileHover={{ y: -10 }} href="https://www.linkedin.com/in/renan-almeida-dantas-66baa7338/edit/intro/"
+                     target="_blank" rel="noopener noreferrer">
+                        <Img src={linkedin} className="w-[50px] h-[50px] cursor-pointer"/>
+                    </motion.a>
+                   <motion.a whileHover={{y: -10}} href="https://github.com/renan-almeida" target="_blank" rel="noopener noreferrer">
+                    <Img src={github} className="w-[50px] h-[50px] cursor-pointer"/>
+                    
+                   </motion.a>
+                    
+                    
+                </div>
             </div>
             
         </div>
