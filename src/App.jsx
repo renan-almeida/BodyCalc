@@ -4,7 +4,7 @@ import Menu from './components/Menu'
 import Title from "./components/Title"
 function App() {
   return (
-    <div className='w-screen min-h-screen flex justify-center ' style={{backgroundColor: "#111315"}}>
+    <div className='w-screen min-h-screen flex justify-center'>
       <div className='container flex flex-col items-center relative'>
         <Menu />
         <Title className='text-white text-2xl font-bold top-16 relative mb-4'>

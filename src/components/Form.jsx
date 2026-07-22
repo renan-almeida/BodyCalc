@@ -70,7 +70,7 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
 
 
     return (
-        <div className="formContainer flex flex-col items-center justify-center relative min-h-screen">
+        <div className="formContainer flex flex-col items-center justify-center relative">
       <Img src={bodycalclogotipo} className="h-[100px] w-[100px] absolute top-10" />
   <h1 className='text-[#f1f1f1] text-center text-[16px] font-bold  mb-8'>
     Preencha abaixo algumas <br />
@@ -219,7 +219,7 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
             >Relatório sobre</p>
       </motion.div>
     )}
-    <div className='flex relative top-45 right-110'>
+    <div className='absolute bottom-4 left-4'>
       <Portfolio />
     </div>
     </div>

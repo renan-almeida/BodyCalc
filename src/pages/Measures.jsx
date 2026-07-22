@@ -86,18 +86,21 @@ function Measures() {
 
                 {
                     medidaEscolhida && (
-                        <motion.div className="fixed inset-0 flex justify-center items-center">
-                            <div className="bg-[#1E1E1E] w-[671px] h-[400px] border-2 border-solid rounded-xl
-                            border-[#4B884B] items-center flex flex-col p-6 pt-8">
-                            <Title className="text-5xl text-white font-bold">
+                        <motion.div className="fixed inset-0 flex justify-center items-center"
+                            initial={{ opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{duration: 0.5, ease: "easeOut"}}>
+                            <motion.div className="bg-[#1E1E1E] w-[671px] h-[400px] border-2 border-solid rounded-xl
+                            border-[#4B884B] items-center flex flex-col p-6 pt-8"
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{duration: 1, ease: "easeOut"}}>
+                            <h1 className="text-5xl text-white font-bold">
                                {medidaEscolhida} 
-                            </Title>
+                            </h1>
                             <div className="flex flex-grow items-center justify-center">
                                 <motion.h3 className="text-white text-center justify-center
-                             leading-relaxed text-[20px] px-4"
-                                initial={{ opacity: 0, y: -50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}>
+                             leading-relaxed text-[20px] px-4">
                                 {guias[medidaEscolhida]}
                             </motion.h3>
                             </div>
@@ -106,7 +109,7 @@ function Measures() {
                                         Voltar
                                     </h2>
                                 </Button>
-                       </div>
+                       </motion.div>
                         </motion.div>
                         
                     )
