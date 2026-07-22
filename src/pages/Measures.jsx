@@ -16,6 +16,16 @@ function Measures() {
 
     const [medidaEscolhida, SetMedidaEscolhida] = useState('')
 
+    const guias = {
+        Peso: 'Use uma balança digital em superfície plana e firme. Pese-se de preferência pela manhã, em jejum e com roupas leves.',
+        Altura: 'Fique descalço, com o corpo ereto e as costas encostadas em uma parede. Mantenha os pés juntos e o olhar para frente. Marque o ponto mais alto da cabeça na parede e meça do chão até essa marca.',
+        Abdomen: 'Meça na altura do umbigo, com a fita métrica paralela ao chão, sem apertar. Expire normalmente antes de medir.',
+        Pescoco: 'Meça logo abaixo do pomo de adão, mantendo a cabeça reta e a fita levemente solta ao redor do pescoço.',
+        Cintura: 'Meça na parte mais estreita do tronco, geralmente entre a última costela e o umbigo. Mantenha a fita paralela ao chão.',
+        Quadril: 'Meça na parte mais larga do quadril, com os pés juntos e a fita paralela ao chão.',
+    };
+    
+
     return (
             <div className='w-screen min-h-screen flex justify-center ' style={{backgroundColor: "#111315"}}>
                 <div className='containerTableBf flex flex-col items-center relative'>
@@ -45,7 +55,7 @@ function Measures() {
                     <div className='flex justify-center gap-21'>
                         <div className='mt-9 flex flex-col items-center gap-10 '>
                             <Img src={peso} alt="Como medir o peso" className="h-[225px] top-10  relative " />
-                            <Button onclick={() => SetMedidaEscolhida('Peso')}>Peso</Button>
+                            <Button onClick={() => SetMedidaEscolhida('Peso')}>Peso</Button>
                         </div>
                         <div className='mt-9 flex flex-col items-center gap-10 '>
                             <Img src={altura} alt="Como medir a altura" className="h-[225px] top-10 relative" />
@@ -70,18 +80,38 @@ function Measures() {
                                 <Button onClick={() => SetMedidaEscolhida('Quadril')}>Quadril</Button>
                             </div>
                     </div>
-             
-                    <div>
-                        {medidaEscolhida === 'Peso' && (
-                            alert("Ola mundo!")
-                        )} 
-                        {medidaEscolhida === 'Altura' && (
-                            alert("Ola mundo!")
-                        )} 
-                    </div>
-                       <div className="flex justify-center top-17 relative">
+                <div className="flex justify-center top-17 relative">
                     <Portfolio />
                 </div>
+
+                {
+                    medidaEscolhida && (
+                        <motion.div className="fixed inset-0 flex justify-center items-center">
+                            <div className="bg-[#1E1E1E] w-[671px] h-[400px] border-2 border-solid rounded-xl
+                            border-[#4B884B] items-center flex flex-col p-6 pt-8">
+                            <Title className="text-5xl text-white font-bold">
+                               {medidaEscolhida} 
+                            </Title>
+                            <div className="flex flex-grow items-center justify-center">
+                                <motion.h3 className="text-white text-center justify-center
+                             leading-relaxed text-[20px] px-4"
+                                initial={{ opacity: 0, y: -50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}>
+                                {guias[medidaEscolhida]}
+                            </motion.h3>
+                            </div>
+                                <Button onClick={() => SetMedidaEscolhida('')}>
+                                    <h2>
+                                        Voltar
+                                    </h2>
+                                </Button>
+                       </div>
+                        </motion.div>
+                        
+                    )
+                }
+
                 </div>
                 </div>
             </div>

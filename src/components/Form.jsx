@@ -70,7 +70,7 @@ function BfCalculation(sexo, idade, altura, peso, pescoco, abdomen, cintura, qua
 
 
     return (
-        <div className="formContainer flex flex-col items-center justify-center relative">
+        <div className="formContainer flex flex-col items-center justify-center relative min-h-screen">
       <Img src={bodycalclogotipo} className="h-[100px] w-[100px] absolute top-10" />
   <h1 className='text-[#f1f1f1] text-center text-[16px] font-bold  mb-8'>
     Preencha abaixo algumas <br />
